@@ -34,25 +34,6 @@ birthday-forest/
     └── hosting.json           # 静态站点部署配置
 ```
 
-## 人物素材处理
-
-`tools/process_characters.py` 使用了需求中指定的方法：
-
-1. 在原始 `960 × 480` 图片中分别截取左、右角色的宽松区域。
-2. 只从裁切区域的四周开始 flood-fill。
-3. 仅把与边缘连通的纯黑/近黑背景设为透明。
-4. 根据剩余 Alpha 自动紧边裁切，并保留 2 px 透明安全边。
-
-因此人物内部的深色头发、衣服和描边不会因为“删除所有黑色”而丢失。当前输出为：
-
-- `friend.png`：194 × 284 px
-- `creator.png`：184 × 274 px
-
-重新处理：
-
-```bash
-python tools/process_characters.py
-```
 
 ## 音乐选择
 
@@ -66,7 +47,7 @@ python tools/process_characters.py
 
 ## 像素美术来源
 
-新增美术均来自 OpenGameArt 的 CC0 / Public Domain 素材，并保留原始图表在 `assets/vendor/`：
+美术均来自 OpenGameArt 的 CC0 / Public Domain 素材，并保留原始图表在 `assets/vendor/`：
 
 | 用途 | 素材 | 作者 | License |
 |---|---|---|---|
