@@ -1,0 +1,9 @@
+Bunny Full Sprite animation tileset
+Author: Pav Creations
+Source: https://opengameart.org/content/bunny-full-sprite-animation-tileset
+License: CC0 / Public Domain
+
+The original 4 x 3 sprite sheet is preserved as
+assets/vendor/bunny-source.png. The game uses a grey 3 x 3 derivative that
+contains only frames from the first two normal rows. The entire third row,
+including the hurt/cross-eye pose, is excluded.

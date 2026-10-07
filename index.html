@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#081c1b" />
+    <meta name="description" content="一片为你留下的像素森林。" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E%3Crect width='32' height='32' fill='%23081c1b'/%3E%3Crect x='14' y='6' width='4' height='20' fill='%23f1d178'/%3E%3Crect x='8' y='12' width='16' height='8' fill='%23f1d178'/%3E%3C/svg%3E" />
+    <title>给你留了一片小森林</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main id="game-shell" aria-label="生日森林小游戏">
+      <canvas id="game" aria-label="可以点击行走与查看回忆的横向像素森林"></canvas>
+
+      <section id="cover" class="cover" aria-labelledby="cover-title">
+        <div class="cover-vignette"></div>
+        <div class="cover-content">
+          <div class="tiny-firefly" aria-hidden="true"></div>
+          <h1 id="cover-title">给你留了一片小森林。</h1>
+          <p>不用赶路，慢慢走就好。</p>
+          <button id="enter-button" class="pixel-button" type="button">进入森林</button>
+        </div>
+      </section>
+
+      <div id="orientation-note" class="orientation-note" aria-live="polite">横过来看看吧~</div>
+      <div id="walk-hint" class="walk-hint">点击森林中的位置移动</div>
+
+      <div id="memory-lights" class="memory-lights" aria-label="沿途亮起的回忆">
+        <i></i><i></i><i></i><i></i><i></i>
+      </div>
+
+      <div class="audio-control">
+        <button id="audio-toggle" class="icon-button" type="button" aria-label="声音设置" aria-expanded="false">♫</button>
+        <div id="audio-panel" class="audio-panel" hidden>
+          <button id="music-toggle" type="button" aria-pressed="true">音乐 <span>开</span></button>
+          <button id="ambient-toggle" type="button" aria-pressed="true">环境音 <span>开</span></button>
+        </div>
+      </div>
+
+      <section id="dialogue" class="dialogue" hidden aria-live="polite">
+        <div class="dialogue-inner">
+          <p id="dialogue-text"></p>
+          <span class="dialogue-next" aria-hidden="true">▼</span>
+        </div>
+      </section>
+
+      <section id="memory-gallery" class="memory-gallery" hidden aria-label="回忆图片">
+        <div class="gallery-frame">
+          <button id="gallery-close" class="gallery-close" type="button" aria-label="关闭图片">×</button>
+          <button id="gallery-prev" class="gallery-arrow prev" type="button" aria-label="上一张">◀</button>
+          <figure>
+            <img id="gallery-image" alt="森林中的回忆" />
+            <video id="gallery-video" controls playsinline preload="metadata" hidden aria-label="森林中的回忆视频"></video>
+            <figcaption id="gallery-caption"></figcaption>
+          </figure>
+          <button id="gallery-next" class="gallery-arrow next" type="button" aria-label="下一张">▶</button>
+          <div id="gallery-dots" class="gallery-dots" aria-label="图片页码"></div>
+        </div>
+      </section>
+
+      <section id="birthday-reveal" class="birthday-reveal" hidden aria-live="polite">
+        <div class="reveal-glow"></div>
+        <h2>生日快乐！</h2>
+      </section>
+
+      <section id="ending-menu" class="ending-menu" hidden>
+        <h2>生日快乐！</h2>
+        <div>
+          <button id="keep-walking" class="pixel-button small" type="button">继续走走</button>
+          <button id="replay-ending" class="pixel-button small" type="button">再看一次</button>
+        </div>
+      </section>
+
+      <audio id="bgm" loop preload="auto" src="assets/audio/bgm.mp3"></audio>
+      <audio id="forest-audio" loop preload="auto" src="assets/audio/forest.mp3"></audio>
+    </main>
+    <script src="game.js"></script>
+  </body>
+</html>

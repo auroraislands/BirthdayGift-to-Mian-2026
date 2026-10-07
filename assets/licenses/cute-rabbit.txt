@@ -1,0 +1,8 @@
+Cute rabbit
+Author: tbbk
+Source: https://opengameart.org/content/cute-rabbit
+License: CC0 / Public Domain
+
+The original white 3x3 sprite sheet is preserved as
+assets/vendor/cute-rabbit-source.png. The game uses a grey recolour generated
+by tools/prepare_art_assets.py.
