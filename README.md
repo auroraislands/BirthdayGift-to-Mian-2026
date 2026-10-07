@@ -19,7 +19,7 @@ birthday-forest/
 │   │   ├── bgm.mp3            # 已选 CC0 音乐
 │   │   └── forest.mp3         # 已选 CC0 森林环境音
 │   ├── characters/
-│   │   ├── 人物.png           # 用户提供的原图
+│   │   ├── 人物.png           # 人物原图
 │   │   ├── friend.png         # 自动处理后的玩家角色
 │   │   └── creator.png        # 自动处理后的“我”
 │   ├── forest/                # 森林远中近景与地面块
